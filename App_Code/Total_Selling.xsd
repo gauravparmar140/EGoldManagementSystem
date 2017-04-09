@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Total_Selling" targetNamespace="http://tempuri.org/Total_Selling.xsd" xmlns:mstns="http://tempuri.org/Total_Selling.xsd" xmlns="http://tempuri.org/Total_Selling.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="db_e_goldConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_e_goldConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.db_e_goldConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_e_goldConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        s.s_id, s.c_id, s.bill_no, s.total_amount, s.remaining_amount, s.purchase_date, s.sell_status, s.current_pay, ts.t_id, ts.p_id, ts.c_id AS Expr1, ts.selling_price, ts.bill_no AS Expr2, p.p_id AS Expr3, p.d_id, 
+                         p.sub_cat_id, p.prod_description, p.prod_weight, p.prod_unique_no, p.prod_quality, p.prod_type, p.prod_status, p.prod_name, p.prod_price, p.product_purchase_date, sc.sub_cat_id AS Expr4, sc.cat_id, 
+                         sc.sub_cat_name, sc.sub_cat_status, c.c_id AS Expr5, c.c_name, c.c_email_address, c.c_address, c.c_status, c.c_mobile_no
+FROM            tbl_selling AS s INNER JOIN
+                         tbl_customer AS c ON s.c_id = c.c_id INNER JOIN
+                         tbl_temp_selling AS ts ON s.bill_no = ts.bill_no INNER JOIN
+                         tbl_product AS p ON ts.p_id = p.p_id INNER JOIN
+                         tbl_sub_category AS sc ON p.sub_cat_id = sc.sub_cat_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="s_id" DataSetColumn="s_id" />
+              <Mapping SourceColumn="c_id" DataSetColumn="c_id" />
+              <Mapping SourceColumn="bill_no" DataSetColumn="bill_no" />
+              <Mapping SourceColumn="total_amount" DataSetColumn="total_amount" />
+              <Mapping SourceColumn="remaining_amount" DataSetColumn="remaining_amount" />
+              <Mapping SourceColumn="purchase_date" DataSetColumn="purchase_date" />
+              <Mapping SourceColumn="sell_status" DataSetColumn="sell_status" />
+              <Mapping SourceColumn="current_pay" DataSetColumn="current_pay" />
+              <Mapping SourceColumn="t_id" DataSetColumn="t_id" />
+              <Mapping SourceColumn="p_id" DataSetColumn="p_id" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="selling_price" DataSetColumn="selling_price" />
+              <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
+              <Mapping SourceColumn="Expr3" DataSetColumn="Expr3" />
+              <Mapping SourceColumn="d_id" DataSetColumn="d_id" />
+              <Mapping SourceColumn="sub_cat_id" DataSetColumn="sub_cat_id" />
+              <Mapping SourceColumn="prod_description" DataSetColumn="prod_description" />
+              <Mapping SourceColumn="prod_weight" DataSetColumn="prod_weight" />
+              <Mapping SourceColumn="prod_unique_no" DataSetColumn="prod_unique_no" />
+              <Mapping SourceColumn="prod_quality" DataSetColumn="prod_quality" />
+              <Mapping SourceColumn="prod_type" DataSetColumn="prod_type" />
+              <Mapping SourceColumn="prod_status" DataSetColumn="prod_status" />
+              <Mapping SourceColumn="prod_name" DataSetColumn="prod_name" />
+              <Mapping SourceColumn="prod_price" DataSetColumn="prod_price" />
+              <Mapping SourceColumn="product_purchase_date" DataSetColumn="product_purchase_date" />
+              <Mapping SourceColumn="Expr4" DataSetColumn="Expr4" />
+              <Mapping SourceColumn="cat_id" DataSetColumn="cat_id" />
+              <Mapping SourceColumn="sub_cat_name" DataSetColumn="sub_cat_name" />
+              <Mapping SourceColumn="sub_cat_status" DataSetColumn="sub_cat_status" />
+              <Mapping SourceColumn="Expr5" DataSetColumn="Expr5" />
+              <Mapping SourceColumn="c_name" DataSetColumn="c_name" />
+              <Mapping SourceColumn="c_email_address" DataSetColumn="c_email_address" />
+              <Mapping SourceColumn="c_address" DataSetColumn="c_address" />
+              <Mapping SourceColumn="c_status" DataSetColumn="c_status" />
+              <Mapping SourceColumn="c_mobile_no" DataSetColumn="c_mobile_no" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Total_Selling" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Total_Selling" msprop:Generator_DataSetName="Total_Selling">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="s_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columns_id" msprop:Generator_ColumnPropNameInRow="s_id" msprop:Generator_ColumnPropNameInTable="s_idColumn" msprop:Generator_UserColumnName="s_id" type="xs:int" />
+              <xs:element name="c_id" msprop:Generator_ColumnVarNameInTable="columnc_id" msprop:Generator_ColumnPropNameInRow="c_id" msprop:Generator_ColumnPropNameInTable="c_idColumn" msprop:Generator_UserColumnName="c_id" type="xs:int" minOccurs="0" />
+              <xs:element name="bill_no" msprop:Generator_ColumnVarNameInTable="columnbill_no" msprop:Generator_ColumnPropNameInRow="bill_no" msprop:Generator_ColumnPropNameInTable="bill_noColumn" msprop:Generator_UserColumnName="bill_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="total_amount" msprop:Generator_ColumnVarNameInTable="columntotal_amount" msprop:Generator_ColumnPropNameInRow="total_amount" msprop:Generator_ColumnPropNameInTable="total_amountColumn" msprop:Generator_UserColumnName="total_amount" type="xs:int" minOccurs="0" />
+              <xs:element name="remaining_amount" msprop:Generator_ColumnVarNameInTable="columnremaining_amount" msprop:Generator_ColumnPropNameInRow="remaining_amount" msprop:Generator_ColumnPropNameInTable="remaining_amountColumn" msprop:Generator_UserColumnName="remaining_amount" type="xs:int" minOccurs="0" />
+              <xs:element name="purchase_date" msprop:Generator_ColumnVarNameInTable="columnpurchase_date" msprop:Generator_ColumnPropNameInRow="purchase_date" msprop:Generator_ColumnPropNameInTable="purchase_dateColumn" msprop:Generator_UserColumnName="purchase_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sell_status" msprop:Generator_ColumnVarNameInTable="columnsell_status" msprop:Generator_ColumnPropNameInRow="sell_status" msprop:Generator_ColumnPropNameInTable="sell_statusColumn" msprop:Generator_UserColumnName="sell_status" type="xs:boolean" minOccurs="0" />
+              <xs:element name="current_pay" msprop:Generator_ColumnVarNameInTable="columncurrent_pay" msprop:Generator_ColumnPropNameInRow="current_pay" msprop:Generator_ColumnPropNameInTable="current_payColumn" msprop:Generator_UserColumnName="current_pay" type="xs:int" minOccurs="0" />
+              <xs:element name="t_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnt_id" msprop:Generator_ColumnPropNameInRow="t_id" msprop:Generator_ColumnPropNameInTable="t_idColumn" msprop:Generator_UserColumnName="t_id" type="xs:int" />
+              <xs:element name="p_id" msprop:Generator_ColumnVarNameInTable="columnp_id" msprop:Generator_ColumnPropNameInRow="p_id" msprop:Generator_ColumnPropNameInTable="p_idColumn" msprop:Generator_UserColumnName="p_id" type="xs:int" minOccurs="0" />
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" minOccurs="0" />
+              <xs:element name="selling_price" msprop:Generator_ColumnVarNameInTable="columnselling_price" msprop:Generator_ColumnPropNameInRow="selling_price" msprop:Generator_ColumnPropNameInTable="selling_priceColumn" msprop:Generator_UserColumnName="selling_price" type="xs:int" minOccurs="0" />
+              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2" type="xs:int" minOccurs="0" />
+              <xs:element name="Expr3" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnExpr3" msprop:Generator_ColumnPropNameInRow="Expr3" msprop:Generator_ColumnPropNameInTable="Expr3Column" msprop:Generator_UserColumnName="Expr3" type="xs:int" />
+              <xs:element name="d_id" msprop:Generator_ColumnVarNameInTable="columnd_id" msprop:Generator_ColumnPropNameInRow="d_id" msprop:Generator_ColumnPropNameInTable="d_idColumn" msprop:Generator_UserColumnName="d_id" type="xs:int" minOccurs="0" />
+              <xs:element name="sub_cat_id" msprop:Generator_ColumnVarNameInTable="columnsub_cat_id" msprop:Generator_ColumnPropNameInRow="sub_cat_id" msprop:Generator_ColumnPropNameInTable="sub_cat_idColumn" msprop:Generator_UserColumnName="sub_cat_id" type="xs:int" minOccurs="0" />
+              <xs:element name="prod_description" msprop:Generator_ColumnVarNameInTable="columnprod_description" msprop:Generator_ColumnPropNameInRow="prod_description" msprop:Generator_ColumnPropNameInTable="prod_descriptionColumn" msprop:Generator_UserColumnName="prod_description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prod_weight" msprop:Generator_ColumnVarNameInTable="columnprod_weight" msprop:Generator_ColumnPropNameInRow="prod_weight" msprop:Generator_ColumnPropNameInTable="prod_weightColumn" msprop:Generator_UserColumnName="prod_weight" type="xs:int" minOccurs="0" />
+              <xs:element name="prod_unique_no" msprop:Generator_ColumnVarNameInTable="columnprod_unique_no" msprop:Generator_ColumnPropNameInRow="prod_unique_no" msprop:Generator_ColumnPropNameInTable="prod_unique_noColumn" msprop:Generator_UserColumnName="prod_unique_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prod_quality" msprop:Generator_ColumnVarNameInTable="columnprod_quality" msprop:Generator_ColumnPropNameInRow="prod_quality" msprop:Generator_ColumnPropNameInTable="prod_qualityColumn" msprop:Generator_UserColumnName="prod_quality" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prod_type" msprop:Generator_ColumnVarNameInTable="columnprod_type" msprop:Generator_ColumnPropNameInRow="prod_type" msprop:Generator_ColumnPropNameInTable="prod_typeColumn" msprop:Generator_UserColumnName="prod_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prod_status" msprop:Generator_ColumnVarNameInTable="columnprod_status" msprop:Generator_ColumnPropNameInRow="prod_status" msprop:Generator_ColumnPropNameInTable="prod_statusColumn" msprop:Generator_UserColumnName="prod_status" type="xs:boolean" minOccurs="0" />
+              <xs:element name="prod_name" msprop:Generator_ColumnVarNameInTable="columnprod_name" msprop:Generator_ColumnPropNameInRow="prod_name" msprop:Generator_ColumnPropNameInTable="prod_nameColumn" msprop:Generator_UserColumnName="prod_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prod_price" msprop:Generator_ColumnVarNameInTable="columnprod_price" msprop:Generator_ColumnPropNameInRow="prod_price" msprop:Generator_ColumnPropNameInTable="prod_priceColumn" msprop:Generator_UserColumnName="prod_price" type="xs:int" minOccurs="0" />
+              <xs:element name="product_purchase_date" msprop:Generator_ColumnVarNameInTable="columnproduct_purchase_date" msprop:Generator_ColumnPropNameInRow="product_purchase_date" msprop:Generator_ColumnPropNameInTable="product_purchase_dateColumn" msprop:Generator_UserColumnName="product_purchase_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Expr4" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnExpr4" msprop:Generator_ColumnPropNameInRow="Expr4" msprop:Generator_ColumnPropNameInTable="Expr4Column" msprop:Generator_UserColumnName="Expr4" type="xs:int" />
+              <xs:element name="cat_id" msprop:Generator_ColumnVarNameInTable="columncat_id" msprop:Generator_ColumnPropNameInRow="cat_id" msprop:Generator_ColumnPropNameInTable="cat_idColumn" msprop:Generator_UserColumnName="cat_id" type="xs:int" minOccurs="0" />
+              <xs:element name="sub_cat_name" msprop:Generator_ColumnVarNameInTable="columnsub_cat_name" msprop:Generator_ColumnPropNameInRow="sub_cat_name" msprop:Generator_ColumnPropNameInTable="sub_cat_nameColumn" msprop:Generator_UserColumnName="sub_cat_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sub_cat_status" msprop:Generator_ColumnVarNameInTable="columnsub_cat_status" msprop:Generator_ColumnPropNameInRow="sub_cat_status" msprop:Generator_ColumnPropNameInTable="sub_cat_statusColumn" msprop:Generator_UserColumnName="sub_cat_status" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Expr5" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnExpr5" msprop:Generator_ColumnPropNameInRow="Expr5" msprop:Generator_ColumnPropNameInTable="Expr5Column" msprop:Generator_UserColumnName="Expr5" type="xs:int" />
+              <xs:element name="c_name" msprop:Generator_ColumnVarNameInTable="columnc_name" msprop:Generator_ColumnPropNameInRow="c_name" msprop:Generator_ColumnPropNameInTable="c_nameColumn" msprop:Generator_UserColumnName="c_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="c_email_address" msprop:Generator_ColumnVarNameInTable="columnc_email_address" msprop:Generator_ColumnPropNameInRow="c_email_address" msprop:Generator_ColumnPropNameInTable="c_email_addressColumn" msprop:Generator_UserColumnName="c_email_address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="c_address" msprop:Generator_ColumnVarNameInTable="columnc_address" msprop:Generator_ColumnPropNameInRow="c_address" msprop:Generator_ColumnPropNameInTable="c_addressColumn" msprop:Generator_UserColumnName="c_address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="c_status" msprop:Generator_ColumnVarNameInTable="columnc_status" msprop:Generator_ColumnPropNameInRow="c_status" msprop:Generator_ColumnPropNameInTable="c_statusColumn" msprop:Generator_UserColumnName="c_status" type="xs:boolean" minOccurs="0" />
+              <xs:element name="c_mobile_no" msprop:Generator_ColumnVarNameInTable="columnc_mobile_no" msprop:Generator_ColumnPropNameInRow="c_mobile_no" msprop:Generator_ColumnPropNameInTable="c_mobile_noColumn" msprop:Generator_UserColumnName="c_mobile_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:s_id" />
+      <xs:field xpath="mstns:t_id" />
+      <xs:field xpath="mstns:Expr3" />
+      <xs:field xpath="mstns:Expr4" />
+      <xs:field xpath="mstns:Expr5" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

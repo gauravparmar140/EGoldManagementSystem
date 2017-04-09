@@ -1,0 +1,276 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+ 
+<html lang="en">
+<head>
+    
+    
+    <title>E-Gold Management System</title>
+    
+    <!-- The styles -->
+    <link href="css/bootstrap-lumen.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="css/charisma-app.css" rel="stylesheet" />
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet' />
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet' />
+    
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet' />
+    <link href='css/jquery.noty.css' rel='stylesheet' />
+    <link href='css/noty_theme_default.css' rel='stylesheet' />
+    <link href='css/elfinder.min.css' rel='stylesheet' />
+    <link href='css/elfinder.theme.css' rel='stylesheet' />
+    
+    <link href='css/uploadify.css' rel='stylesheet'/>
+    <link href='css/animate.min.css' rel='stylesheet'/>
+    <link href="css/StyleSheet.css" rel="Stylesheet" />
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
+
+    
+
+    <!-- The fav icon -->
+    
+
+</head>
+
+<body>
+    <!-- topbar starts -->
+    <div class="navbar navbar-default"  style="height:80px">
+    
+            <img src="img/main_logo.png" style="height:100%; width:50%;margin-left:30%"/>
+    
+            
+            
+            <div class="btn-group pull-right" 
+                style="float:right;position:relative;margin-top:20px;margin-left:20px; top: 0px; left: -29px; width: 141px;">
+                
+                <button class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"> admin</span>
+                    <span class="caret"></span>
+                </button>
+
+                <ul class="dropdown-menu">
+                    <li><a href="profile.aspx">Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="logout.aspx">Logout</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- topbar ends -->
+<div class="ch-container">
+    <div class="row">
+        
+        <!-- left menu starts -->
+        <div class="col-sm-2 col-lg-2">
+            <div class="sidebar-nav">
+                <div class="nav-canvas">
+                    <div class="nav-sm nav nav-stacked">
+
+                    </div>
+
+                    <ul class="nav nav-pills nav-stacked main-menu">
+                         <li><a class="ajax-link" href="home.aspx">
+                         <img src="icons/home.png" />
+                         <span>Home</span></a>
+                         </li>
+                        
+                        <li class="accordion">
+                            <a href="#">
+                            <image src="icons/people.png"></image>
+                             <span> Dealer</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="add_dealer.aspx">Add Dealer</a></li>
+                                <li><a href="manage_dealer.aspx">Manage Dealer</a></li>
+                            </ul>
+                        </li>
+                        
+                         
+                        <li class="accordion">
+                            <a href="#"><img src="icons/category.png" /> <span> Category</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="add_category.aspx">Add Category</a></li>
+                                <li><a href="manage_category.aspx">Manage Category</a></li>
+                            </ul>
+                        </li>
+                            <li class="accordion">
+                            <a href="#"><img src="icons/sub_category.png" /><span> Sub-Category</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="add_sub_category.aspx">Add Sub Category</a></li>
+                                <li><a href="manage_sub_category.aspx">Manage Sub-Category</a></li>
+                            </ul>
+                        </li>
+
+                           
+
+
+                        
+                         <li class="accordion">
+                            <a href="#">
+                            <span><img src="icons/product.png" />Register Product</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="add_product.aspx">Add Product</a></li>
+                                <li><a href="manage_product.aspx">Manage Product</a></li>
+                            </ul>
+                        </li> 
+
+                        <li class="accordion">
+                            <a href="#"><img src="icons/stock.png" /><span> Stock</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                
+                                <li><a href="manage_stock.aspx">Manage Stock</a></li>
+
+                                   </ul>
+                        </li>
+                         
+
+
+                        
+                         
+                         <li class="accordion">
+                            <a href="#"><img src="icons/reports.png" /><span> Report Generation</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="Customer_pending_amount.aspx">Customer Pending Amount</a></li>
+                                 <li><a href="View_selling_data.aspx">View Total Selling</a></li>
+
+                            </ul>
+                        </li>   
+                         
+                         
+                         
+                         
+                         <li class="accordion">
+                            <a href="#"><img src="icons/order.png" /><span>Order</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="add_order.aspx">Take Orders</a></li>
+                                <li><a href="manage_order.aspx">Manage Orders</a></li>
+                                <li><a href="incomplete_orders.aspx">Incomplete Orders</a></li>
+                                 <li><a href="completed_orders.aspx">Completed Orders</a></li>
+                                 <li><a href="customer_pending_amount_order.aspx">Customer Pending Amount Orders</a></li>
+                            </ul>
+                        </li>   
+                           
+                          
+                           
+
+                        <li><a class="ajax-link" href="alert_config.aspx">
+                         <img src="icons/alert.png" />
+                         <span>Alert Configuration</span></a>
+                         </li>
+
+                         <li><a class="ajax-link" href="cus_info.aspx">
+                         <img src="icons/people.png" />
+                         <span>Customer Information Management</span></a>
+                         </li>
+
+                           
+
+                         
+                         <li class="accordion">
+                            <a href="#"><i class="glyphicon glyphicon-user"></i><span>Manage Account</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="change_password.aspx">
+                                
+                                <img src=
+                                "icons/password.png" />
+
+                                 Password</a></li>
+                                 
+
+                            </ul>
+                        </li>   
+                          
+                        
+
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+        <!-- left menu ends -->
+
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</div><!--/fluid-row-->
+
+
+
+    </div>
+    <!-- Ad ends -->
+
+    <hr>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h3>Settings</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Here settings can be configured...</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                    <a href="#" class="btn btn-primary" data-dismiss="modal">Save changes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="row">
+
+        <p class="col-md-3 col-sm-3 col-xs-12 powered-by">
+        <center>
+           <b> Ambika Jewellers</b></center>
+        </p>
+    </footer>
+
+</div><!--/.fluid-container-->
+
+<!-- external javascript -->
+
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- library for cookie management -->
+<script src="js/jquery.cookie.js"></script>
+<!-- calender plugin -->
+<script src='bower_components/moment/min/moment.min.js'></script>
+<script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+<!-- data table plugin -->
+<script src='js/jquery.dataTables.min.js'></script>
+
+<!-- select or dropdown enhancer -->
+<script src="bower_components/chosen/chosen.jquery.min.js"></script>
+<!-- plugin for gallery image view -->
+<script src="bower_components/colorbox/jquery.colorbox-min.js"></script>
+<!-- notification plugin -->
+<script src="js/jquery.noty.js"></script>
+<!-- library for making tables responsive -->
+<script src="bower_components/responsive-tables/responsive-tables.js"></script>
+<!-- tour plugin -->
+<script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+<!-- star rating plugin -->
+<script src="js/jquery.raty.min.js"></script>
+<!-- for iOS style toggle switch -->
+<script src="js/jquery.iphone.toggle.js"></script>
+<!-- autogrowing textarea plugin -->
+<script src="js/jquery.autogrow-textarea.js"></script>
+<!-- multiple file upload plugin -->
+<script src="js/jquery.uploadify-3.1.min.js"></script>
+<!-- history.js for cross-browser state change on ajax -->
+<script src="js/jquery.history.js"></script>
+<!-- application script for Charisma demo -->
+<script src="js/charisma.js"></script>
+
+
+</body>
+</html>
+
+ 
